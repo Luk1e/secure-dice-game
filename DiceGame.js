@@ -44,8 +44,9 @@ class DiceGame {
       computerChoice.toString()
     );
 
-    this.ui.displayMessage("I selected a random value in the range 0..1");
-    this.ui.displayHMAC(hmac);
+    this.ui.displayMessage(
+      `I selected a random value in the range 0..1 (HMAC=${hmac}).`
+    );
     this.ui.displayMessage("Try to guess my selection.");
     this.ui.displayOptions(["0", "1"]);
 
@@ -116,8 +117,9 @@ class DiceGame {
     this.ui.displayMessage(
       `It's time for ${isComputer ? "my" : "your"} throw.`
     );
-    this.ui.displayMessage("I selected a random value in the range 0..5");
-    this.ui.displayHMAC(hmac);
+    this.ui.displayMessage(
+      `I selected a random value in the range 0..5 (HMAC=${hmac}).`
+    );
     this.ui.displayMessage("Add your number modulo 6.");
 
     this.ui.displayOptions(["0", "1", "2", "3", "4", "5"]);

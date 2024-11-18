@@ -36,7 +36,7 @@ class DiceGameUI {
   async getPlayerNumber(max) {
     while (true) {
       const input = await this.question("Your selection: ");
-      if (input === "X") this.ui.exit();
+      if (input === "X") this.exit();
       if (input === "?") {
         await this.handleHelp("throw");
       }
@@ -52,10 +52,6 @@ class DiceGameUI {
 
   displayMessage(message) {
     console.log(message);
-  }
-
-  displayHMAC(hmac) {
-    console.log(`(HMAC=${hmac}).`);
   }
 
   close() {
